@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robert Ling — Full-Stack Developer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --tag-bg: #1f2d3d;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #58a6ff 0%, #3fb950 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .hero-text h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .hero-text .tagline {
+      margin-top: 0.35rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .hero-text .location {
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .card h2 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    /* ── Status banner ── */
+    .status {
+      background: #0d2137;
+      border: 1px solid #1f4068;
+      border-radius: 8px;
+      padding: 0.85rem 1.1rem;
+      font-size: 0.9rem;
+      color: var(--accent);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent2);
+      margin-top: 0.35rem;
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* ── Tech tags ── */
+    .tech-group { margin-bottom: 1rem; }
+    .tech-group:last-child { margin-bottom: 0; }
+
+    .tech-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.8rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .tag.green  { color: var(--accent2); }
+    .tag.purple { color: #d2a8ff; }
+    .tag.orange { color: #ffa657; }
+
+    /* ── List items ── */
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .list-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .list-item:first-child { padding-top: 0; }
+
+    .list-icon { color: var(--muted); flex-shrink: 0; }
+
+    /* ── Contact links ── */
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 0.9rem;
+      transition: opacity 0.15s;
+    }
+
+    .contact-link:last-child { border-bottom: none; padding-bottom: 0; }
+    .contact-link:first-child { padding-top: 0; }
+    .contact-link:hover { opacity: 0.75; }
+    .contact-link .contact-icon { color: var(--muted); }
+
+    /* ── Fun fact ── */
+    .fun-fact {
+      background: #161b22;
+      border-left: 3px solid var(--accent2);
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .fun-fact strong { color: var(--text); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding-top: 0.5rem;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 540px) {
+      .hero { flex-direction: column; text-align: center; }
+      .hero-text .location { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="avatar">👨‍💻</div>
+      <div class="hero-text">
+        <h1>Robert Ling</h1>
+        <p class="tagline">Full-Stack Developer specializing in Vue.js and Laravel.<br>I build systems that actually work in production.</p>
+        <p class="location">📍 Sibu, Sarawak, Malaysia</p>
+      </div>
+    </div>
+
+    <!-- Currently working on -->
+    <div class="card">
+      <h2>🔭 Currently Working On</h2>
+      <div class="status">
+        <div class="status-dot"></div>
+        <span>Tax-compliant e-invoicing system processing <strong>5,000+ invoices monthly</strong> — 2 years in production.</span>
+      </div>
+    </div>
+
+    <!-- Tech stack -->
+    <div class="card">
+      <h2>🚀 What I Build With</h2>
+
+      <div class="tech-group">
+        <div class="tech-label">Frontend</div>
+        <div class="tags">
+          <span class="tag">Vue.js (6+ yrs)</span>
+          <span class="tag">Pinia</span>
+          <span class="tag">Vuetify</span>
+          <span class="tag">Inertia.js</span>
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <div class="tech-label">Backend</div>
+        <div class="tags">
+          <span class="tag green">Laravel</span>
+          <span class="tag green">REST APIs</span>
+          <span class="tag green">Node.js</span>
+          <span class="tag green">Python</span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <div class="tech-label">Database</div>
+        <div class="tags">
+          <span class="tag orange">MySQL</span>
+          <span class="tag orange">PostgreSQL</span>
+          <span class="tag orange">MS SQL Server</span>
+        </div>
+      </div>
+
+      <div class="tech-group">
+        <div class="tech-label">Tools</div>
+        <div class="tags">
+          <span class="tag purple">Git</span>
+          <span class="tag purple">Docker</span>
+          <span class="tag purple">Claude</span>
+          <span class="tag purple">Copilot</span>
+          <span class="tag purple">Figma</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Looking for -->
+    <div class="card">
+      <h2>🎯 Looking For</h2>
+      <p style="font-size:0.9rem;color:var(--text);line-height:1.6;">
+        Frontend or Full-Stack Developer roles in <strong>Malaysia / Singapore</strong>.
+        Open to opportunities that make a real difference.
+      </p>
+    </div>
+
+    <!-- Ask me about -->
+    <div class="card">
+      <h2>💬 Ask Me About</h2>
+      <div class="list-item"><span class="list-icon">›</span><span>Building with Vue.js and Laravel</span></div>
+      <div class="list-item"><span class="list-icon">›</span><span>Integrating with legacy systems (I've got war stories)</span></div>
+      <div class="list-item"><span class="list-icon">›</span><span>AI-assisted development workflows</span></div>
+      <div class="list-item"><span class="list-icon">›</span><span>Making technical decisions in small teams</span></div>
+      <div class="list-item"><span class="list-icon">›</span><span>Tax compliance system architecture</span></div>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+      <h2>📫 Get In Touch</h2>
+      <a class="contact-link" href="https://linkedin.com/in/robert-linglb" target="_blank" rel="noopener">
+        <span class="contact-icon">🔗</span>
+        linkedin.com/in/robert-linglb
+      </a>
+      <a class="contact-link" href="mailto:robert.llb90@gmail.com">
+        <span class="contact-icon">✉️</span>
+        robert.llb90@gmail.com
+      </a>
+      <a class="contact-link" href="https://github.com/RobertLing1228" target="_blank" rel="noopener">
+        <span class="contact-icon">🐙</span>
+        github.com/RobertLing1228
+      </a>
+    </div>
+
+    <!-- Fun fact -->
+    <div class="card">
+      <h2>⚡ Fun Fact</h2>
+      <div class="fun-fact">
+        <strong>Shipped a production system in 30 days</strong> by choosing boring tech over exciting tech.
+        Two years later — zero regrets.
+      </div>
+    </div>
+
+    <footer>
+      <p>💡 Documenting the dev journey on <a href="https://linkedin.com/in/robert-linglb" target="_blank" rel="noopener">LinkedIn</a> — real problems, real solutions, no BS.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
