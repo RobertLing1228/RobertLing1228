@@ -16,20 +16,20 @@
 
 ### 👨‍💻 About Me
 
-**Who am I?**
-!Robert Ling. Full-stack developer, 6+ years in the game.
+**Who am I?**\
+Robert Ling. Full-stack developer, 6+ years in the game.
 
-**What I built before?**
-!Worked on multiple projects spanning the full stack, but the most recent one is a tax-compliance middleware built for multi-tenant support across a group of companies.
+**What I built before?**\
+Worked on multiple projects spanning the full stack, but the most recent one is a tax-compliance middleware built for multi-tenant support across a group of companies.
 
-**What to expect from me?**
-!Quality work that compounds over the years, not code that falls apart after a quarter. Obsessive with OOP — try me.
+**What to expect from me?**\
+Quality work that compounds over the years, not code that falls apart after a quarter. Obsessive with OOP — try me.
 
-**My target in the next 3 years?**
-!Achieve a Senior role within 1 year. System Architect / Principal Developer after that.
+**My target in the next 3 years?**\
+Achieve a Senior role within 1 year. System Architect / Principal Developer after that.
 
-**What I like to eat?**
-!Steamed White Pomfret (HK style), Steamed Chicken Rice (Nanyang style), and Nasi Gepuk Berempah.
+**What I like to eat?**\
+Steamed White Pomfret (HK style), Steamed Chicken Rice (Nanyang style), and Nasi Gepuk Berempah.
 
 ---
 
@@ -69,9 +69,3 @@
 ![Copilot](https://img.shields.io/badge/GitHub_Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
 
 ---
-
-<div align="center">
-
-💡 *Documenting my dev journey on [LinkedIn](https://linkedin.com/in/robert-linglb) — real problems, real solutions, no BS.*
-
-</div>
