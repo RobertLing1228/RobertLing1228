@@ -16,9 +16,20 @@
 
 ### 👨‍💻 About Me
 
-I'm a full-stack developer who genuinely enjoys the craft — not just closing tickets, but building things that feel good to use and make someone's day a little easier. With 6+ years on Vue.js and Laravel, I've learned that the best code isn't always the cleverest — it's the kind that a teammate can pick up at 2am and actually understand.
+Who am I?
+Robert Ling. Full-stack developer, 6+ years in the game.
 
-Beyond the work itself, I care about sharing what I know. Whether it's a quick tip on LinkedIn, a cleaner pattern in a PR review, or just explaining *why* before *how* — I believe developers grow faster when knowledge moves freely. **Better code, better teams, better products** — that's the kind of tomorrow worth building toward.
+What I built before?
+Worked on multiple projects spanning the full stack, but the most recent one is a tax-compliance middleware built for multi-tenant support across a group of companies.
+
+What to expect from me?
+Quality work that compounds over the years, not code that falls apart after a quarter. Obsessive with OOP — try me.
+
+My target in the next 3 years?
+Achieve a Senior role within 1 year. System Architect / Principal Developer after that.
+
+What I like to eat?
+Steamed White Pomfret (HK style), Steamed Chicken Rice (Nanyang style), and Nasi Gepuk Berempah.
 
 ---
 
