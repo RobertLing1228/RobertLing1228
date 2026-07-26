@@ -3,7 +3,7 @@
 # Hey, welcome to my temple 👋
 
 **Full-Stack Developer · Vue.js & Laravel**
-**Open to relocation · Kuala Lumpur 🇲🇾 or Singapore 🇸🇬**
+**Open to relocation · Kuala Lumpur, Malaysia or Singapore**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-robert--linglb-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/robert-linglb)
 [![Email](https://img.shields.io/badge/Email-robert.llb90@gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:robert.llb90@gmail.com)
